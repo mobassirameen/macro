@@ -48,14 +48,14 @@ void makeplotForMC(){
    t1->SetBranchAddress("B_phi_mass", &B_phi_mass, &b_B_phi_mass);
 
    
-   TH1F *h1 = new TH1F("h1","", 200, 4.9, 5.8 );
-   TH1F *h2 = new TH1F("h2","", 200, 0.98, 1.08 );
-   TH1F *h3 = new TH1F("h3","", 200, 2.90, 3.3 );
-   TH1F *h4 = new TH1F("h4","", 200, 5.90, 6.6 );
+   TH1F *h1 = new TH1F("h1","", 100, 4.92, 6.06 );
+   TH1F *h2 = new TH1F("h2","", 100, 0.98, 1.08 );
+   TH1F *h3 = new TH1F("h3","", 100, 2.87, 3.30 );
+   TH1F *h4 = new TH1F("h4","", 100, 5.7, 6.9 );
     
    int nentries = (int)t1->GetEntries();
    
-   cout << nentries << endl;
+   //cout << nentries << endl;
  
     for ( int i = 0; i<nentries; i++)
     {
@@ -86,7 +86,7 @@ void makeplotForMC(){
 
     
     h1->GetYaxis()->SetTitleOffset(1.50);
-    h1->GetYaxis()->CenterTitle(true);
+    //h1->GetYaxis()->CenterTitle(true);
     h1->GetYaxis()->SetTitle("Events");
     h1->GetXaxis()->SetTitleOffset(1.15);
     h1->GetXaxis()->SetLabelOffset(0.02);
@@ -96,7 +96,7 @@ void makeplotForMC(){
     h1->GetYaxis()->SetTitleSize(0.042);
     
     h2->GetYaxis()->SetTitleOffset(1.50);
-    h2->GetYaxis()->CenterTitle(true);
+    //h2->GetYaxis()->CenterTitle(true);
     h2->GetYaxis()->SetTitle("Events");
     h2->GetXaxis()->SetTitleOffset(1.15);
     h2->GetXaxis()->SetLabelOffset(0.02);
@@ -106,7 +106,7 @@ void makeplotForMC(){
     h2->GetYaxis()->SetTitleSize(0.042);
     
     h3->GetYaxis()->SetTitleOffset(1.50);
-    h3->GetYaxis()->CenterTitle(true);
+    //h3->GetYaxis()->CenterTitle(true);
     h3->GetYaxis()->SetTitle("Eventss");
     h3->GetXaxis()->SetTitleOffset(1.15);
     h3->GetXaxis()->SetLabelOffset(0.02);
@@ -116,7 +116,7 @@ void makeplotForMC(){
     h3->GetYaxis()->SetTitleSize(0.042);
     
     h4->GetYaxis()->SetTitleOffset(1.50);
-    h4->GetYaxis()->CenterTitle(true);
+    //h4->GetYaxis()->CenterTitle(true);
     h4->GetYaxis()->SetTitle("Eventss");
     h4->GetXaxis()->SetTitleOffset(1.15);
     h4->GetXaxis()->SetLabelOffset(0.02);
@@ -128,16 +128,16 @@ void makeplotForMC(){
     
     
     canvas1->cd();
-    h1->Draw("");
+    h1->Draw();
     
     canvas2->cd();
-    h2->Draw("");
+    h2->Draw();
     
     canvas3->cd();
-    h3->Draw("");
+    h3->Draw();
     
     canvas4->cd();
-    h4->Draw("EP");
+    h4->Draw();
     
     //TLegend *legend = new TLegend(.75,.80,.95,.95);
     //TLegend *legend = new TLegend(.80,.80,.62,.88);
