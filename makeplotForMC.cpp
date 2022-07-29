@@ -27,7 +27,8 @@ void makeplotForMC(){
    //TFile *file = new TFile ("Rootuple_BsToJPsiphi_2018_MiniAOD.root");
    //TFile *file = new TFile ("FlatNtuple_pvtMCBsPi.root");
    //TFile *file = new TFile ("/Users/mohammadmobassirameen/Desktop/BcToBsPi-analysis/GenLevel-BsPi/29Apr2022_FlatNtuple_pvtMCBsPi_.root");
-   TFile *file = new TFile ("/Users/mohammadmobassirameen/Desktop/BcToBsPi-analysis/BDT_BcToBsPi/bdtsamples/MCSample/PvtMC-BsPi_FlatNtuple_07May2022.root");
+   //TFile *file = new TFile ("/Users/mohammadmobassirameen/Desktop/BcToBsPi-analysis/BDT_BcToBsPi/bdtsamples/MCSample/PvtMC-BsPi_FlatNtuple_07May2022.root");
+   TFile *file = new TFile ("/Users/mohammadmobassirameen/Desktop/BcToBsPi-NTuples/pvtMCSamples/PvtMC-BsPi_FlatNtuple_28July2022.root");
    TDirectory *dir = (TDirectory*)file->Get("rootuple");
    TTree *t1 = (TTree*)dir->Get("ntuple");
 
